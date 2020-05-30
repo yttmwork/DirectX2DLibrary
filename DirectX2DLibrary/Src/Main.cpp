@@ -3,7 +3,7 @@
 #include <crtdbg.h>
 #include <Windows.h>
 #include "Engine/Engine.h"
-#include "Utility/Vec.h"
+#include "Useful/Vec.h"
 
 Vec2 g_Position = Vec2(0.0f, 0.0f);
 Vec2 g_Scale = Vec2(1.0f, 1.0f);

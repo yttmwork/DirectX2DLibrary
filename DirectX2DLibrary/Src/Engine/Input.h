@@ -8,7 +8,7 @@
 #define DIRECTINPUT_VERSION 0x0800	//!< DirectInputのWarning対策
 
 #include <dinput.h>
-#include "../Utility/Vec.h"
+#include "../Useful/Vec.h"
 #include "InputKeyboard.h"
 #include "InputGamePad.h"
 #include "InputMouse.h"

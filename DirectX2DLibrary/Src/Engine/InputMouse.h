@@ -6,7 +6,7 @@
 #define INPUT_MOUSE_H_
 
 #include <dinput.h>
-#include "../Utility/Vec.h"
+#include "../Useful/Vec.h"
 
 /** @brief マウスボタンの種類 */
 enum MouseButton

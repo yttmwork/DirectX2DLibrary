@@ -1,7 +1,7 @@
 ﻿#include <Windows.h>
 #include <math.h>
 #include <D3dx9math.h>
-#include "../Utility/Vec.h"
+#include "../Useful/Vec.h"
 #include "Window.h"
 #include "Input.h"
 

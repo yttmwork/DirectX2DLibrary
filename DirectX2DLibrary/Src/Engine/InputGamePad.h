@@ -5,7 +5,7 @@
 #ifndef INPUT_GAME_PAD_H_
 #define INPUT_GAME_PAD_H_
 
-#include "../Utility/Vec.h"
+#include "../Useful/Vec.h"
 
 /** @brief ゲームパッドボタンの種類 */
 enum GamePadKind

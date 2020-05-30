@@ -2,7 +2,7 @@
 #include <d3dx9.h>
 #include "Graphics.h"
 #include "Window.h"
-#include "../Utility/Size.h"
+#include "../Useful/Size.h"
 
 // 静的ライブラリ
 #pragma comment(lib, "d3d9.lib")
