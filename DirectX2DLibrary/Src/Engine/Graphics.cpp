@@ -132,7 +132,7 @@ void FinishDraw()
 	g_D3DDevice->Present(nullptr, nullptr, nullptr, nullptr);
 }
 
-void DrawTextureUV(float x, float y, const char* texture_keyword, UCHAR alpha, float tex_x, float tex_y, float sprite_width, float sprite_height, float angle, float scale_x, float scale_y)
+void DrawTextureUV(float x, float y, const char* texture_keyword, float tex_x, float tex_y, float sprite_width, float sprite_height, UCHAR alpha, float angle, float scale_x, float scale_y)
 {
 	Texture* texture_data = GetTexture(texture_keyword);
 	if (texture_data == nullptr)
