@@ -91,6 +91,7 @@ DrawTexture(
 	g_Position.X,  // 描画座標X
 	g_Position.Y,  // 描画座標Y
 	"Enemy",       // 使用するテクスチャのキーワード
+	g_Alpha,       // 透過値
 	g_Angle,       // 回転角度
 	g_Scale.X,     // 拡縮率X
 	g_Scale.Y);    // 拡縮率Y
@@ -105,6 +106,7 @@ DrawTextureUV(
 	0.0f,         // テクスチャ座標
 	64.0f,        // テクスチャの描画サイズ(横幅)
 	64.0f,        // テクスチャの描画サイズ(縦幅)
+	g_Alpha,      // 透過値
 	g_Angle,      // 回転角度
 	g_Scale.X,    // 拡縮率X
 	g_Scale.Y);   // 拡縮率Y
