@@ -17,9 +17,11 @@ enum MouseButton
 };
 
 /**
-* @brief マウス入力初期化関数@n
-* マウスの入力取得に必要な初期化を行う@n
+* @brief マウス入力初期化関数
+* @details <pre>
+* マウスの入力取得に必要な初期化を行う
 * ※InitInputで実行されるので使用者は実行する必要がない
+* </pre>
 * @retval true 初期化成功
 * @retval false 初期化失敗
 * @param[in] input_interface DirectInputのインターフェース
@@ -27,17 +29,21 @@ enum MouseButton
 bool InitMouse(LPDIRECTINPUT8 input_interface);
 
 /**
-* @brief マウス入力解放関数@n
-* マウスの入力機能を終了する@n
+* @brief マウス入力解放関数
+* @details <pre>
+* マウスの入力機能を終了する
 * ※ReleaseInputで実行されるので使用者は実行する必要がない
+* </pre>
 */
 void ReleaseMouse();
 
 /**
-* @brief 入力情報の更新@n
-* マウスの入力情報の更新を行う@n
-* 毎フレーム実行する必要がある@n
+* @brief 入力情報の更新
+* @details <pre>
+* マウスの入力情報の更新を行う
+* 毎フレーム実行する必要がある
 * ※UpdateInputで実行されるので使用者は実行する必要がない
+* </pre>
 */
 void UpdateMouse();
 

@@ -8,9 +8,11 @@
 #include <dinput.h>
 
 /**
-* @brief キーボード入力初期化関数@n
-* キーボードの入力取得に必要な初期化を行う@n
+* @brief キーボード入力初期化関数
+* @details <pre>
+* キーボードの入力取得に必要な初期化を行う
 * ※InitInputで実行されるので使用者は実行する必要がない
+* </pre>
 * @retval true 初期化成功
 * @retval false 初期化失敗
 * @param[in] input_interface DirectInputのインターフェース
@@ -18,17 +20,21 @@
 bool InitKeyboard(LPDIRECTINPUT8 input_interface);
 
 /**
-* @brief キーボード入力解放関数@n
-* キーボードの入力機能を終了する@n
+* @brief キーボード入力解放関数
+* @details <pre>
+* キーボードの入力機能を終了する
 * ※ReleaseInputで実行されるので使用者は実行する必要がない
+* </pre>
 */
 void ReleaseKeyboard();
 
 /**
-* @brief 入力情報の更新@n
-* キーボードの入力情報の更新を行う@n
-* 毎フレーム実行する必要がある@n
+* @brief 入力情報の更新
+* @details <pre>
+* キーボードの入力情報の更新を行う
+* 毎フレーム実行する必要がある
 * ※UpdateInputで実行されるので使用者は実行する必要がない
+* </pre>
 */
 void UpdateKeyboard();
 

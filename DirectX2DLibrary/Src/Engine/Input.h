@@ -42,31 +42,40 @@ enum ButtonState
 };
 
 /**
-* @brief Input機能初期化関数@n
-* 入力取得に必要な初期化を行う@n
+* @brief Input機能初期化関数
+* @details <pre>
+* 入力取得に必要な初期化を行う
 * ※InitEngineで実行されるので使用者は実行する必要がない
+* </pre>
 * @retval true 初期化成功
 * @retval false 初期化失敗
 */
 bool InitInput();
 
 /**
-* @brief Input機能終了関数@n
-* Input機能を終了させる@n
+* @brief Input機能終了関数
+* @details <pre>
+* Input機能を終了させる
 * ※ReleaseEngineで実行されるので使用者は実行する必要がない
+* </pre>
 */
 void ReleaseInput();
 
 /**
-* @brief 入力情報の更新@n
-* デバイスの入力情報の更新を行う@n
+* @brief 入力情報の更新
+* @details <pre>
+* デバイスの入力情報の更新を行う
 * 毎フレーム実行する必要がある
+* </pre>
 */
 void UpdateInput();
 
 /**
-* @brief ボタン状態の更新@n
+* @brief ボタン状態の更新
+* @details <pre>
 * ボタンの押下情報と状態から最新のボタンの状態を返す
+* ※使用者が実行する必要はない
+* </pre>
 * @retval 更新されたボタンの状態
 * @param[in] is_push ボタンの押下状態
 * @param[in] state ボタンの状態

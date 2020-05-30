@@ -26,9 +26,11 @@ enum GamePadKind
 };
 
 /**
-* @brief ゲームパッド入力初期化関数@n
-* ゲームパッドの入力取得に必要な初期化を行う@n
+* @brief ゲームパッド入力初期化関数
+* @details <pre>
+* ゲームパッドの入力取得に必要な初期化を行う
 * ※InitInputで実行されるので使用者は実行する必要がない
+* </pre>
 * @retval true 初期化成功
 * @retval false 初期化失敗
 * @param[in] input_interface DirectInputのインターフェース
@@ -36,17 +38,21 @@ enum GamePadKind
 bool InitGamePad(LPDIRECTINPUT8 input_interface);
 
 /**
-* @brief ゲームパッド入力解放関数@n
-* ゲームパッドの入力機能を終了する@n
+* @brief ゲームパッド入力解放関数
+* @details <pre>
+* ゲームパッドの入力機能を終了する
 * ※ReleaseInputで実行されるので使用者は実行する必要がない
+* </pre>
 */
 void ReleaseGamePad();
 
 /**
-* @brief 入力情報の更新@n
-* ゲームパッドの入力情報の更新を行う@n
-* 毎フレーム実行する必要がある@n
+* @brief 入力情報の更新
+* @details <pre>
+* ゲームパッドの入力情報の更新を行う
+* 毎フレーム実行する必要がある
 * ※UpdateInputで実行されるので使用者は実行する必要がない
+* </pre>
 */
 void UpdateGamePad();
 
