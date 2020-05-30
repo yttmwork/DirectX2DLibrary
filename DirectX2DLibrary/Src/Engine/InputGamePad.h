@@ -56,7 +56,7 @@ void UpdateGamePad();
 * @retval false 押されていない
 * @param[in] button 判定したいボタンの種類
 */
-bool GetGamePadKey(GamePadKind button);
+bool IsHeldGamePad(GamePadKind button);
 
 /**
 * @brief ゲームパッドのボタンが押された瞬間の判定関数
@@ -64,7 +64,7 @@ bool GetGamePadKey(GamePadKind button);
 * @retval false 押した瞬間以外
 * @param[in] button 判定したいボタンの種類
 */
-bool GetGamePadKeyUp(GamePadKind button);
+bool IsPushedGamePad(GamePadKind button);
 
 /**
 * @brief ゲームパッドのボタンを離した瞬間の判定関数
@@ -72,6 +72,6 @@ bool GetGamePadKeyUp(GamePadKind button);
 * @retval false 離した瞬間以外
 * @param[in] button 判定したいボタンの種類
 */
-bool GetGamePadKeyDown(GamePadKind button);
+bool IsReleasedGamePad(GamePadKind button);
 
 #endif

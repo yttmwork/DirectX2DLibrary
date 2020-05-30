@@ -104,7 +104,7 @@ void ReleaseGraphics()
 	}
 }
 
-bool DrawStart(DWORD color)
+bool StartDraw(DWORD color)
 {
 	if (g_D3DDevice == nullptr)
 	{
@@ -121,7 +121,7 @@ bool DrawStart(DWORD color)
 	return false;
 }
 
-void DrawEnd()
+void FinishDraw()
 {
 	if (g_D3DDevice == nullptr)
 	{

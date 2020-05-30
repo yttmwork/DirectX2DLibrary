@@ -38,7 +38,7 @@ void UpdateKeyboard();
 * @retval false 押されていない
 * @param[in] key_code 判定したいキーの種類(DIK_～を使用する)
 */
-bool GetKeyboard(UINT key_code);
+bool IsHeldKeyboard(UINT key_code);
 
 /**
 * @brief キーボードのキーが押された瞬間の判定関数
@@ -46,7 +46,7 @@ bool GetKeyboard(UINT key_code);
 * @retval false 押された瞬間ではない
 * @param[in] key_code 判定したいキーの種類(DIK_～を使用する)
 */
-bool GetKeyboardDown(UINT key_code);
+bool IsPushedKeyboard(UINT key_code);
 
 /**
 * @brief キーボードのキーが離された瞬間の判定関数
@@ -54,6 +54,6 @@ bool GetKeyboardDown(UINT key_code);
 * @retval false 離された瞬間ではない
 * @param[in] key_code 判定したいキーの種類(DIK_～を使用する)
 */
-bool GetKeyboardUp(UINT key_code);
+bool IsReleasedKeyboard(UINT key_code);
 
 #endif

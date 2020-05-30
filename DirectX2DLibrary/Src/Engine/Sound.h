@@ -29,7 +29,7 @@ void ReleaseSound();
 * @param[in] keyword 再生するサウンドのキーワード
 * @param[in] is_loop ループ設定(デフォルトは非ループ)
 */
-void StartPlayingSound(const char* keyword, bool is_loop = false);
+void PlayMusic(const char* keyword, bool is_loop = false);
 
 /**
 * @brief 複製再生関数@n
@@ -37,15 +37,15 @@ void StartPlayingSound(const char* keyword, bool is_loop = false);
 * SEのように同じサウンドを重複して再生する場合に効果的
 * @param[in] keyword 再生するサウンドのキーワード
 */
-void StartPlayingDuplicateSound(const char* keyword);
+void PlayDuplicateMusic(const char* keyword);
 
 /**
 * @brief サウンド停止関数@n
 * キーワード指定されたサウンドを停止する@n
-* ※StartDuplicateSoundを使用して再生しているサウンドは対象外
+* ※PlayDuplicateMusicを使用して再生しているサウンドは対象外
 * @param[in] keyword 停止するサウンドのキーワード
 */
-void StopSound(const char* keyword);
+void StopMusic(const char* keyword);
 
 /**
 * @brief サウンドファイルの読み込み関数@n
@@ -68,13 +68,13 @@ void ReleaseSoundFile(const char* keyword);
 * @brief サウンドファイルの全解放関数@n
 * サウンドファイルを全て解放する
 */
-void AllReleaseSoundFile();
+void ReleaseAllSoundFiles();
 
 /**
 * @brief 重複再生サウンド削除関数@n
-* 再生が終了したStartDuplicateSoundのサウンドに対して終了処理を行う@n
+* 再生が終了したPlayDuplicateMusicのサウンドに対して終了処理を行う@n
 * 毎フレーム実行する必要がある
 */
-void EraseDuplicateSound();
+void EraseDuplicateMusic();
 
 #endif

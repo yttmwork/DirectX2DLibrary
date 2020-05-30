@@ -23,7 +23,7 @@ void InitTexture();
 * @brief テクスチャの全解放@n
 * 読み込んでいるすべてのテクスチャを解放する
 */
-void AllReleaseTexture();
+void ReleaseAllTextures();
 
 
 /**

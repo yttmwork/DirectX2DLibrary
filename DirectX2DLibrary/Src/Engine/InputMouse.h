@@ -47,7 +47,7 @@ void UpdateMouse();
 * @retval false 押されていない
 * @param[in] button_type 判定したいボタンの種類
 */
-bool GetMouse(MouseButton button_type);
+bool IsHeldMouse(MouseButton button_type);
 
 /**
 * @brief マウスボタンが押された瞬間の判定関数
@@ -55,7 +55,7 @@ bool GetMouse(MouseButton button_type);
 * @retval false 押した瞬間以外
 * @param[in] button_type 判定したいボタンの種類
 */
-bool GetMouseDown(MouseButton button_type);
+bool IsPushedMouse(MouseButton button_type);
 
 /**
 * @brief マウスボタンを離した瞬間の判定関数
@@ -63,6 +63,6 @@ bool GetMouseDown(MouseButton button_type);
 * @retval false 離した瞬間以外
 * @param[in] button_type 判定したいボタンの種類
 */
-bool GetMouseUp(MouseButton button_type);
+bool IsReleasedMouse(MouseButton button_type);
 
 #endif

@@ -62,7 +62,7 @@ bool InitSound()
 
 void ReleaseSound()
 {
-	AllReleaseSoundFile();
+	ReleaseAllSoundFiles();
 
 	// 全解放
 	for (auto itr = Sound->DuplicateList.begin(); itr != Sound->DuplicateList.end(); itr++)
@@ -160,7 +160,7 @@ void ReleaseSoundFile(const char* keyword)
 	}
 }
 
-void AllReleaseSoundFile()
+void ReleaseAllSoundFiles()
 {
 	// セカンダリバッファの解放
 	for (auto itr = Sound->BufferList.begin(); itr != Sound->BufferList.end(); itr++)
@@ -176,7 +176,7 @@ void AllReleaseSoundFile()
 	Sound->BufferList.clear();
 }
 
-void StartPlayingSound(const char* keyword, bool is_loop)
+void PlayMusic(const char* keyword, bool is_loop)
 {
 	if (Sound->BufferList.count(keyword) == 0)
 	{
@@ -191,7 +191,7 @@ void StartPlayingSound(const char* keyword, bool is_loop)
 		DSBPLAY_LOOPING & loop_bit);
 }
 
-void StartPlayingDuplicateSound(const char* keyword)
+void PlayDuplicateMusic(const char* keyword)
 {
 	if (Sound->BufferList.count(keyword) == 0)
 	{
@@ -209,7 +209,7 @@ void StartPlayingDuplicateSound(const char* keyword)
 	Sound->DuplicateList[last_id]->Play(0, 0, 0);
 }
 
-void StopSound(const char* keyword)
+void StopMusic(const char* keyword)
 {
 	if (Sound->BufferList[keyword] == nullptr)
 	{
@@ -222,7 +222,7 @@ void StopSound(const char* keyword)
 	Sound->BufferList[keyword]->SetCurrentPosition(0);
 }
 
-void EraseDuplicateSound()
+void EraseDuplicateMusic()
 {
 	for (auto itr = Sound->DuplicateList.begin(); itr != Sound->DuplicateList.end(); )
 	{

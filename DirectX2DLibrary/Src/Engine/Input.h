@@ -34,11 +34,11 @@ enum ButtonKind
 /** @brief ボタンの状態 */
 enum ButtonState
 {
-	ButtonStateNone,	//!< 未使用状態
-	ButtonStateDown,	//!< 押した瞬間
-	ButtonStatePush,	//!< 押している
-	ButtonStateUp,		//!< 離した瞬間
-	ButtonStateMax,		//!< 最大数
+	ButtonStateNone,		//!< 未使用状態
+	ButtonStatePushed,		//!< 押した瞬間
+	ButtonStateHeld,		//!< 押している
+	ButtonStateReleased,	//!< 離した瞬間
+	ButtonStateMax,			//!< 最大数
 };
 
 /**

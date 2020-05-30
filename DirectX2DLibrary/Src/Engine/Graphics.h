@@ -55,14 +55,14 @@ void ReleaseGraphics();
 * @retval false 描画開始失敗
 * @param[in] color クリアカラー
 */
-bool DrawStart(DWORD color);
+bool StartDraw(DWORD color);
 
 /**
 * @brief 描画終了関数@n
 * 描画の終了を宣言し、バックバッファとフロントバッファを入れ替える@n
 * ※この関数は必ずDrawStartの後に実行する
 */
-void DrawEnd();
+void FinishDraw();
 
 /**
 * @brief テクスチャ描画関数@n

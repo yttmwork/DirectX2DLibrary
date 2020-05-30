@@ -34,8 +34,8 @@ bool InitEngine(int width, int height, const char* title_str, bool is_window_mod
 
 void ReleaseEngine()
 {
-	AllReleaseTexture();
-	AllReleaseSoundFile();
+	ReleaseAllTextures();
+	ReleaseAllSoundFiles();
 
 	ReleaseGraphics();
 	ReleaseInput();

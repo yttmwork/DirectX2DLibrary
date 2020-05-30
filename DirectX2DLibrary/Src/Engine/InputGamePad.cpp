@@ -95,9 +95,9 @@ void ReleaseGamePad()
 	}
 }
 
-bool GetGamePadKey(GamePadKind button)
+bool IsHeldGamePad(GamePadKind button)
 {
-	if (g_GamePadStates[button] == ButtonState::ButtonStatePush)
+	if (g_GamePadStates[button] == ButtonState::ButtonStateHeld)
 	{
 		return true;
 	}
@@ -105,9 +105,9 @@ bool GetGamePadKey(GamePadKind button)
 	return false;
 }
 
-bool GetGamePadKeyUp(GamePadKind button)
+bool IsPushedGamePad(GamePadKind button)
 {
-	if (g_GamePadStates[button] == ButtonState::ButtonStateUp)
+	if (g_GamePadStates[button] == ButtonState::ButtonStatePushed)
 	{
 		return true;
 	}
@@ -115,9 +115,9 @@ bool GetGamePadKeyUp(GamePadKind button)
 	return false;
 }
 
-bool GetGamePadKeyDown(GamePadKind button)
+bool IsReleasedGamePad(GamePadKind button)
 {
-	if (g_GamePadStates[button] == ButtonState::ButtonStateDown)
+	if (g_GamePadStates[button] == ButtonState::ButtonStateReleased)
 	{
 		return true;
 	}
