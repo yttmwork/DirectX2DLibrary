@@ -73,13 +73,13 @@ Texture* GetTexutre("Enemy");
 // 描画開始
 // 描画処理を実行する場合、必ず最初実行する
 // 1フレームに1度だけ実行する
-DrawStart(0);
+StartDraw(0);
 
 // テクスチャなどの描画処理を実行する
 
 // 描画終了
 // 描画処理を終了する場合に必ず実行する
-DrawEnd();
+FinishDraw();
 ```
 
 #### テクスチャ描画
@@ -130,7 +130,7 @@ ReleaseTexture("Enemy")
 
 ```全解放
 // 読み込まれているテクスチャを全て解放する
-AllReleaseTexture();
+ReleaseAllTextures();
 ```
 
 ### DirectInput
@@ -151,19 +151,19 @@ UpdateInput();
 ```
 // キーの指定はDIK～で行う
 // 押された瞬間
-if (GetKeyboardDown(DIK_A) == true)
+if (IsPushedKeyboard(DIK_A) == true)
 {
 	// Aキーが押された瞬間
 }
 
 // 押している間
-if (GetKeyboard(DIK_A) == true)
+if (IsHeldKeyboard(DIK_A) == true)
 {
 	// Aキーが押されている
 }
 
 // 離された瞬間
-if (GetKeyboardUp(DIK_A) == true)
+if (IsReleasedKeyboard(DIK_A) == true)
 {
 	// Aキーが離された瞬間
 }
@@ -172,19 +172,19 @@ if (GetKeyboardUp(DIK_A) == true)
 #### マウス入力取得
 ```
 // 押された瞬間
-if (GetMouseDown(MouseButton::Left) == true)
+if (IsPushedMouse(MouseButton::Left) == true)
 {
 	// マウスの左ボタンを押した瞬間
 }
 
 // 押している間
-if (GetMouse(MouseButton::Left) == true)
+if (IsHeldMouse(MouseButton::Left) == true)
 {
 	// マウスの左ボタンを押している
 }
 
 // 離された瞬間
-if (GetMouseUp(MouseButton::Left) == true)
+if (IsReleasedMouse(MouseButton::Left) == true)
 {
 	// マウスの左ボタンを離した瞬間
 }
@@ -193,19 +193,19 @@ if (GetMouseUp(MouseButton::Left) == true)
 #### ゲームパッド入力取得
 ```
 // 押された瞬間
-if (GetGamePadKeyDown(GamePadKind::GamePadKindButton01) == true)
+if (IsPushedGamePad(GamePadKind::GamePadKindButton01) == true)
 {
 	// ゲームパッドのボタン1を押した瞬間
 }
 
 // 押している間
-if (GetGamePadKey(GamePadKind::GamePadKindButton01) == true)
+if (IsHeldGamePad(GamePadKind::GamePadKindButton01) == true)
 {
 	// ゲームパッドのボタン1を押している
 }
 
 // 離された瞬間
-if (GetGamePadKeyUp(GamePadKind::GamePadKindButton01) == true)
+if (IsReleasedGamePad(GamePadKind::GamePadKindButton01) == true)
 {
 	// ゲームパッドのボタン1を離した瞬間
 }
@@ -229,7 +229,7 @@ ReleaseSoundFile("Bgm");
 
 ```
 // サウンドファイルを全て解放する
-AllReleaseSoundFile();
+ReleaseAllSoundFiles();
 ```
 
 #### サウンド再生
@@ -238,7 +238,7 @@ AllReleaseSoundFile();
 // 停止時に先頭に戻す処理を実装しているため再生は先頭から行われる
 // Bgmの再生に効果的
 // Stop関数で再生を止めることが出来る
-StartPlayingSound("Bgm", true);
+PlayMusic("Bgm", true);
 ```
 
 ```
@@ -246,14 +246,14 @@ StartPlayingSound("Bgm", true);
 // 同じ音を同時に再生することが出来る
 // SEの再生に効果的
 // Stopによる停止はできない
-StartPlayingDuplicateSound("Se");
+PlayDuplicateMusic("Se");
 ```
 
 #### サウンド停止
 ```
 // 停止
 // 指定したキーワードの音を停止する
-SoundStop("Bgm");
+StopMusic("Bgm");
 ```
 
 #### 重複再生サウンド削除
@@ -261,6 +261,6 @@ SoundStop("Bgm");
 // 重複再生サウンドの削除
 // 重複再生が終了したサウンドを削除する
 // 毎フレームチェックをする必要があるので毎フレーム実行する必要あり
-EraseDuplicateSound();
+EraseDuplicateMusic();
 ```
 
