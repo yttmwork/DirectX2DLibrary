@@ -48,10 +48,10 @@
     <ClInclude Include="Src\Engine\Window.h">
       <Filter>ソース ファイル\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Utility\Size.h">
+    <ClInclude Include="Src\Useful\Size.h">
       <Filter>ソース ファイル\Useful</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Utility\Vec.h">
+    <ClInclude Include="Src\Useful\Vec.h">
       <Filter>ソース ファイル\Useful</Filter>
     </ClInclude>
     <ClInclude Include="Src\Engine\Graphics.h">

@@ -147,8 +147,8 @@
     <ClInclude Include="Src\Engine\Sound.h" />
     <ClInclude Include="Src\Engine\Texture.h" />
     <ClInclude Include="Src\Engine\Window.h" />
-    <ClInclude Include="Src\Utility\Size.h" />
-    <ClInclude Include="Src\Utility\Vec.h" />
+    <ClInclude Include="Src\Useful\Size.h" />
+    <ClInclude Include="Src\Useful\Vec.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
