@@ -14,7 +14,7 @@ static TextureData* g_Texture;
 
 void InitTexture()
 {
-	AllReleaseTexture();
+	ReleaseAllTextures();
 
 	g_Texture = new TextureData();
 }
@@ -35,7 +35,7 @@ void ReleaseTexture(const char* keyword)
 	}
 }
 
-void AllReleaseTexture()
+void ReleaseAllTextures()
 {
 	if (g_Texture == nullptr)
 	{

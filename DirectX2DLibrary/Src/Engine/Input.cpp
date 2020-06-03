@@ -88,18 +88,18 @@ ButtonState UpdateButtonState(bool is_push, ButtonState state)
 	{
 		if (state == ButtonState::ButtonStateNone)
 		{
-			return ButtonState::ButtonStateDown;
+			return ButtonState::ButtonStatePushed;
 		}
 		else
 		{
-			return ButtonState::ButtonStatePush;
+			return ButtonState::ButtonStateHeld;
 		}
 	}
 	else
 	{
-		if (state == ButtonState::ButtonStatePush)
+		if (state == ButtonState::ButtonStateHeld)
 		{
-			return ButtonState::ButtonStateUp;
+			return ButtonState::ButtonStateReleased;
 		}
 		else
 		{

@@ -1,7 +1,7 @@
 ﻿#include <Windows.h>
 #include <math.h>
 #include <D3dx9math.h>
-#include "../Utility/Vec.h"
+#include "../Useful/Vec.h"
 #include "Window.h"
 #include "Input.h"
 
@@ -89,9 +89,9 @@ void UpdateKeyboard()
 	}
 }
 
-bool GetKeyboard(UINT key_code)
+bool IsHeldKeyboard(UINT key_code)
 {
-	if (g_KeyboardState[key_code] == ButtonState::ButtonStatePush)
+	if (g_KeyboardState[key_code] == ButtonState::ButtonStateHeld)
 	{
 		return true;
 	}
@@ -99,9 +99,9 @@ bool GetKeyboard(UINT key_code)
 	return false;
 }
 
-bool GetKeyboardDown(UINT key_code)
+bool IsPushedKeyboard(UINT key_code)
 {
-	if (g_KeyboardState[key_code] == ButtonState::ButtonStateDown)
+	if (g_KeyboardState[key_code] == ButtonState::ButtonStatePushed)
 	{
 		return true;
 	}
@@ -109,9 +109,9 @@ bool GetKeyboardDown(UINT key_code)
 	return false;
 }
 
-bool GetKeyboardUp(UINT key_code)
+bool IsReleasedKeyboard(UINT key_code)
 {
-	if (g_KeyboardState[key_code] == ButtonState::ButtonStateUp)
+	if (g_KeyboardState[key_code] == ButtonState::ButtonStateReleased)
 	{
 		return true;
 	}

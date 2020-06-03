@@ -11,9 +11,11 @@
 #include "Sound.h"
 
 /**
-* @brief エンジン初期化関数@n
-* ゲームで使うエンジン(描画、入力、サウンド)の初期化とウィンドウの作成を行う@n
+* @brief エンジン初期化関数
+* @details <pre>
+* ゲームで使うエンジン(描画、入力、サウンド)の初期化とウィンドウの作成を行う
 * ※この関数はゲームループ開始前に１度だけ実行する
+* </pre>
 * @retval true 初期化成功
 * @retval false 初期化失敗
 * @param[in] width ウィンドウの横幅
@@ -24,9 +26,11 @@
 bool InitEngine(int width, int height, const char* title_str, bool is_window_mode = true);
 
 /**
-* @brief エンジン解放関数@n
-* ゲーム終了後にエンジンの解放を行う@n
+* @brief エンジン解放関数
+* @details <pre>
+* ゲーム終了後にエンジンの解放を行う  
 * ※この関数はゲームループ終了後に１度だけ実行する
+* </pre>
 */
 void ReleaseEngine();
 

@@ -91,7 +91,7 @@ void UpdateMouse()
 	g_MousePos.Y = (float)p.y;
 }
 
-bool GetMouseDown(MouseButton button_type)
+bool IsHeldMouse(MouseButton button_type)
 {
 	const int MouseTrgValue = 0x80;
 
@@ -104,7 +104,7 @@ bool GetMouseDown(MouseButton button_type)
 	return false;
 }
 
-bool GetMouse(MouseButton button_type)
+bool IsPushedMouse(MouseButton button_type)
 {
 	const int MouseTrgValue = 0x80;
 	if (g_PrevMouseState.rgbButtons[button_type] & MouseTrgValue &&
@@ -116,7 +116,7 @@ bool GetMouse(MouseButton button_type)
 	return false;
 }
 
-bool GetMouseUp(MouseButton button_type)
+bool IsReleasedMouse(MouseButton button_type)
 {
 	const int MouseTrgValue = 0x80;
 

@@ -5,7 +5,7 @@
 #ifndef INPUT_GAME_PAD_H_
 #define INPUT_GAME_PAD_H_
 
-#include "../Utility/Vec.h"
+#include "../Useful/Vec.h"
 
 /** @brief ゲームパッドボタンの種類 */
 enum GamePadKind
@@ -26,9 +26,11 @@ enum GamePadKind
 };
 
 /**
-* @brief ゲームパッド入力初期化関数@n
-* ゲームパッドの入力取得に必要な初期化を行う@n
+* @brief ゲームパッド入力初期化関数
+* @details <pre>
+* ゲームパッドの入力取得に必要な初期化を行う
 * ※InitInputで実行されるので使用者は実行する必要がない
+* </pre>
 * @retval true 初期化成功
 * @retval false 初期化失敗
 * @param[in] input_interface DirectInputのインターフェース
@@ -36,17 +38,21 @@ enum GamePadKind
 bool InitGamePad(LPDIRECTINPUT8 input_interface);
 
 /**
-* @brief ゲームパッド入力解放関数@n
-* ゲームパッドの入力機能を終了する@n
+* @brief ゲームパッド入力解放関数
+* @details <pre>
+* ゲームパッドの入力機能を終了する
 * ※ReleaseInputで実行されるので使用者は実行する必要がない
+* </pre>
 */
 void ReleaseGamePad();
 
 /**
-* @brief 入力情報の更新@n
-* ゲームパッドの入力情報の更新を行う@n
-* 毎フレーム実行する必要がある@n
+* @brief 入力情報の更新
+* @details <pre>
+* ゲームパッドの入力情報の更新を行う
+* 毎フレーム実行する必要がある
 * ※UpdateInputで実行されるので使用者は実行する必要がない
+* </pre>
 */
 void UpdateGamePad();
 
@@ -56,7 +62,7 @@ void UpdateGamePad();
 * @retval false 押されていない
 * @param[in] button 判定したいボタンの種類
 */
-bool GetGamePadKey(GamePadKind button);
+bool IsHeldGamePad(GamePadKind button);
 
 /**
 * @brief ゲームパッドのボタンが押された瞬間の判定関数
@@ -64,7 +70,7 @@ bool GetGamePadKey(GamePadKind button);
 * @retval false 押した瞬間以外
 * @param[in] button 判定したいボタンの種類
 */
-bool GetGamePadKeyUp(GamePadKind button);
+bool IsPushedGamePad(GamePadKind button);
 
 /**
 * @brief ゲームパッドのボタンを離した瞬間の判定関数
@@ -72,6 +78,6 @@ bool GetGamePadKeyUp(GamePadKind button);
 * @retval false 離した瞬間以外
 * @param[in] button 判定したいボタンの種類
 */
-bool GetGamePadKeyDown(GamePadKind button);
+bool IsReleasedGamePad(GamePadKind button);
 
 #endif

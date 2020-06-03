@@ -6,7 +6,7 @@
 #define INPUT_MOUSE_H_
 
 #include <dinput.h>
-#include "../Utility/Vec.h"
+#include "../Useful/Vec.h"
 
 /** @brief マウスボタンの種類 */
 enum MouseButton
@@ -17,9 +17,11 @@ enum MouseButton
 };
 
 /**
-* @brief マウス入力初期化関数@n
-* マウスの入力取得に必要な初期化を行う@n
+* @brief マウス入力初期化関数
+* @details <pre>
+* マウスの入力取得に必要な初期化を行う
 * ※InitInputで実行されるので使用者は実行する必要がない
+* </pre>
 * @retval true 初期化成功
 * @retval false 初期化失敗
 * @param[in] input_interface DirectInputのインターフェース
@@ -27,17 +29,21 @@ enum MouseButton
 bool InitMouse(LPDIRECTINPUT8 input_interface);
 
 /**
-* @brief マウス入力解放関数@n
-* マウスの入力機能を終了する@n
+* @brief マウス入力解放関数
+* @details <pre>
+* マウスの入力機能を終了する
 * ※ReleaseInputで実行されるので使用者は実行する必要がない
+* </pre>
 */
 void ReleaseMouse();
 
 /**
-* @brief 入力情報の更新@n
-* マウスの入力情報の更新を行う@n
-* 毎フレーム実行する必要がある@n
+* @brief 入力情報の更新
+* @details <pre>
+* マウスの入力情報の更新を行う
+* 毎フレーム実行する必要がある
 * ※UpdateInputで実行されるので使用者は実行する必要がない
+* </pre>
 */
 void UpdateMouse();
 
@@ -47,7 +53,7 @@ void UpdateMouse();
 * @retval false 押されていない
 * @param[in] button_type 判定したいボタンの種類
 */
-bool GetMouse(MouseButton button_type);
+bool IsHeldMouse(MouseButton button_type);
 
 /**
 * @brief マウスボタンが押された瞬間の判定関数
@@ -55,7 +61,7 @@ bool GetMouse(MouseButton button_type);
 * @retval false 押した瞬間以外
 * @param[in] button_type 判定したいボタンの種類
 */
-bool GetMouseDown(MouseButton button_type);
+bool IsPushedMouse(MouseButton button_type);
 
 /**
 * @brief マウスボタンを離した瞬間の判定関数
@@ -63,6 +69,6 @@ bool GetMouseDown(MouseButton button_type);
 * @retval false 離した瞬間以外
 * @param[in] button_type 判定したいボタンの種類
 */
-bool GetMouseUp(MouseButton button_type);
+bool IsReleasedMouse(MouseButton button_type);
 
 #endif

@@ -2,7 +2,7 @@
 #include <d3dx9.h>
 #include "Graphics.h"
 #include "Window.h"
-#include "../Utility/Size.h"
+#include "../Useful/Size.h"
 
 // 静的ライブラリ
 #pragma comment(lib, "d3d9.lib")
@@ -104,7 +104,7 @@ void ReleaseGraphics()
 	}
 }
 
-bool DrawStart(DWORD color)
+bool StartDraw(DWORD color)
 {
 	if (g_D3DDevice == nullptr)
 	{
@@ -121,7 +121,7 @@ bool DrawStart(DWORD color)
 	return false;
 }
 
-void DrawEnd()
+void FinishDraw()
 {
 	if (g_D3DDevice == nullptr)
 	{
@@ -132,7 +132,7 @@ void DrawEnd()
 	g_D3DDevice->Present(nullptr, nullptr, nullptr, nullptr);
 }
 
-void DrawTextureUV(float x, float y, const char* texture_keyword, UCHAR alpha, float tex_x, float tex_y, float sprite_width, float sprite_height, float angle, float scale_x, float scale_y)
+void DrawTextureUV(float x, float y, const char* texture_keyword, float tex_x, float tex_y, float sprite_width, float sprite_height, UCHAR alpha, float angle, float scale_x, float scale_y)
 {
 	Texture* texture_data = GetTexture(texture_keyword);
 	if (texture_data == nullptr)

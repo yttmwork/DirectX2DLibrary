@@ -10,8 +10,8 @@
 #define WINDOW_CLASS_NAME "Window"	//!< ウィンドウクラス名
 
 /**
-* @brief ウィンドウ生成関数@n
-* 引数で指定された内容でウィンドウを作成する
+* @brief ウィンドウ生成関数
+* @details 引数で指定された内容でウィンドウを作成する
 * @retval true 生成成功
 * @retval false 生成失敗
 * @param[in] width 横幅
